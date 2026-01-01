@@ -119,13 +119,15 @@ class TelegramAlerter:
         spr = o.get("spread_bps", 0.0)
         micro = o.get("microprice_ticks", 0.0)
 
+        # ✅ FIXED: unmatched parenthesis removed
         entry = o.get("entry", o.get("primary_entry", o.get("PRIMARY_ENTRY", o.get("price", 0.0))))
         stop = o.get("stop", 0.0)
 
-        # single TP line: use tp1
-        tp = o.get("tp", None)
+        tp = o.get("tp")
         if tp is None:
-            tp = o.get("tp1", 0.0)
+            tp = o.get("tp1")
+        if tp is None:
+            tp = o.get("tp2", 0.0)
 
         vf_side = o.get("vf_side", None)
         vf_h = o.get("vf_horizon_sec", None)

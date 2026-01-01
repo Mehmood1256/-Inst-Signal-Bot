@@ -80,9 +80,9 @@ class Settings:
     # ============================================================
     # VPIN BUCKETS (tiered + volume-adaptive)
     # ============================================================
-    VPIN_BUCKET_T1_USD: float = 200_000.0
-    VPIN_BUCKET_T2_USD: float = 90_000.0
-    VPIN_BUCKET_T3_USD: float = 45_000.0
+    VPIN_BUCKET_T1_USD: float = 120_000.0
+    VPIN_BUCKET_T2_USD: float = 80_000.0
+    VPIN_BUCKET_T3_USD: float = 50_000.0
 
     VPIN_BUCKET_VOL_REF_USD: float = 25_000_000.0
     VPIN_BUCKET_SCALE_MIN: float = 0.50
@@ -237,6 +237,6 @@ class Settings:
     # TELEGRAM ALERTS
     # ============================================================
     TELEGRAM_ENABLED: bool = True
-    TELEGRAM_BOT_TOKEN: str = "8595562912:AAEB0KMjOOctyZvheb4Sj-hJwVJUSaVu6FU"
+    TELEGRAM_BOT_TOKEN: str = ""
     TELEGRAM_CHAT_ID: str = "5092611265"
     TELEGRAM_DEBUG: bool = True
